@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  transition: background 0.3s;
+}
+
+.dark {
+  background: #1e1e1e;
+  color: #ffffff;
+}
+
+.todo-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 60px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark .todo-container {
+  background: #2a2a2a;
+  color: #ffffff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 24px;
+}
+
+.dark-mode-toggle {
+  padding: 8px 16px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dark-mode-toggle:hover {
+  background: #0056b3;
+}
+
+.add-item {
+  margin-bottom: 20px;
+}
+
+.add-item label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.add-item input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.add-item button {
+  padding: 10px 16px;
+  border: none;
+  background: #28a745;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-item button:hover {
+  background: #218838;
+}
+
+.counters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-bar button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background: #f8f9fa;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filter-bar button.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.task-list {
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.dark .task-item {
+  background: #3a3a3a;
+}
+
+.task-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.task-item span {
+  flex: 1;
+  cursor: pointer;
+}
+
+.completed-text {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.task-item button {
+  padding: 6px 12px;
+  border: none;
+  background: #dc3545;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.task-item button:hover {
+  background: #c82333;
+}
+
+.task-item button:nth-child(3) {
+  background: #ffc107;
+  color: black;
+}
+
+.task-item button:nth-child(3):hover {
+  background: #e0a800;
+}
+
+.confirm-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirm-dialog p {
+  margin-bottom: 20px;
+}
+
+.confirm-dialog button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.confirm-dialog button:first-child {
+  background: #dc3545;
+  color: white;
+}
+
+.confirm-dialog button:last-child {
+  background: #6c757d;
+  color: white;
+}
+
+@media (max-width: 500px) {
+  .todo-container {
+    margin: 20px;
+  }
+}
